@@ -1,6 +1,6 @@
 module.exports = {
   bible: {
-    html: require('../html/bible/index.html'),
+    html: { uri: 'file:///android_asset/html/bible/index.html' },
     open: (event) => { _navigator.push({
       name: 'bible',
       title: 'Η Αγία Γραφή',
@@ -8,7 +8,7 @@ module.exports = {
     })}
   },
   horologe: {
-    html: require('../html/horologe/index.html'),
+    html: { uri: 'file:///android_asset/html/horologe/index.html' },
     open: (event) => { _navigator.push({
       name: 'horologe',
       title: 'Ωρολόγιο',
@@ -16,7 +16,7 @@ module.exports = {
     })}
   },
   missal: {
-    html: require('../html/missal/index.html'),
+    html: { uri: 'file:///android_asset/html/missal/index.html' },
     open: (event) => { _navigator.push({
       name: 'missal',
       title: 'Ευχολόγιο',
@@ -24,7 +24,7 @@ module.exports = {
     })}
   },
   operations: {
-    html: require('../html/operations/index.html'),
+    html: { uri: 'file:///android_asset/html/operations/index.html' },
     open: (event) => { _navigator.push({
       name: 'operations',
       title: 'Λειτουργικά',
@@ -32,7 +32,7 @@ module.exports = {
     })}
   },
   thefathers: {
-    html: require('../html/thefathers/index.html'),
+    html: { uri: 'file:///android_asset/html/thefathers/index.html' },
     open: (event) => { _navigator.push({
       name: 'thefathers',
       title: 'Οι Πατέρες',
@@ -40,7 +40,7 @@ module.exports = {
     })}
   },
   thecopticpeople: {
-    html: require('../html/thecopticpeople/index.html'),
+    html: { uri: 'file:///android_asset/html/thecopticpeople/index.html' },
     open: (event) => { _navigator.push({
       name: 'thecopticpeople',
       title: 'Οι κόπτες',

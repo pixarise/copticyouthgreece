@@ -1,4 +1,4 @@
 
 var _navigator;
 
-import CYG from './src/android/index';
+import CopticYouthGreece from './src/android/index';

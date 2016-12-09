@@ -1,10 +1,18 @@
 module.exports = {
-  bible: {
-    html: { uri: 'file:///android_asset/html/bible/index.html' },
+  newtestament: {
+    html: { uri: 'file:///android_asset/html/newtestament/index.html' },
     open: (event) => { _navigator.push({
-      name: 'bible',
-      title: 'Η Αγία Γραφή',
-      subtitle: 'Μια φράση για την Αγία Γραφή',
+      name: 'newtestament',
+      title: 'Καινή Διαθήκη',
+      subtitle: null,
+    })}
+  },
+  oldtestament: {
+    html: { uri: 'file:///android_asset/html/oldtestament/index.html' },
+    open: (event) => { _navigator.push({
+      name: 'oldtestament',
+      title: 'Παλαιά Διαθήκη',
+      subtitle: null,
     })}
   },
   horologe: {

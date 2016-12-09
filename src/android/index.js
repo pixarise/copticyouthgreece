@@ -12,12 +12,12 @@ import {
   BackAndroid,
   WebView,
   Image,
+  ScrollView,
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import Menu from './components/Menu.js'
-import Triangle from './components/Triangle.js'
 
 const _menu = require('./_menu.js')
 
@@ -25,7 +25,9 @@ const deviceWidth = Dimensions.get('window').width
 const deviceHeight = Dimensions.get('window').height
 
 const toolbarHeight = 56
+const heroHeight = 250
 const webviewHeight = deviceHeight - toolbarHeight
+const menuHeight = deviceHeight - toolbarHeight - heroHeight - 80
 
 const resources = {
   hero: require('../../resources/church.jpg'),
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
   },
   heroWrap: {
     width: deviceWidth,
-    height: 250,
+    height: heroHeight,
     position: 'relative',
 
     zIndex: 1,
@@ -76,7 +78,7 @@ const styles = StyleSheet.create({
   },
   heroImage: {
     width: deviceWidth,
-    height: 250,
+    height: heroHeight,
   },
   heroContent: {
     bottom: 20,
@@ -124,12 +126,15 @@ var renderScene = function(route, navigationOperations, onComponentRef) {
           style={styles.toolbar}
           titleColor="#fff"
           title="Coptic Youth Greece" />
-        <View style={styles.heroWrap}>
-          <Image source={resources.hero} style={styles.heroImage} />
-        </View>
-        <View style={styles.menu}>
-          <Menu />
-        </View>
+
+        <ScrollView>
+          <View style={styles.heroWrap}>
+            {/*<Image source={resources.hero} style={styles.heroImage} />*/}
+          </View>
+          <View style={styles.menu}>
+            <Menu />
+          </View>
+        </ScrollView>
       </View>
     )
   } else {

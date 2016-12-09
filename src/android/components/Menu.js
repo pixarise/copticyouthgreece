@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#ffffff',
-    height: 55,
+    height: 52,
     paddingTop: 13,
     paddingLeft: 10,
     position: 'relative',
@@ -32,12 +32,12 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#444444',
-    fontSize: 20,
+    fontSize: 18,
   },
   buttonIcon: {
     position: 'absolute',
     right: 10,
-    top: 11,
+    top: 9,
   }
 });
 
@@ -117,6 +117,17 @@ class Menu extends React.Component {
           <TouchableNativeFeedback onPress={_menu.thecopticpeople.open} background={TouchableNativeFeedback.SelectableBackground()}>
             <View style={styles.button}>
               <Text style={styles.buttonText}>Οι Κόπτες</Text>
+              <View style={styles.buttonIcon}>
+                <Icon name="import-contacts" size={30} color="#3F51B5" />
+              </View>
+            </View>
+          </TouchableNativeFeedback>
+        </View>
+
+        <View style={styles.card}>
+          <TouchableNativeFeedback onPress={_menu.legendary.open} background={TouchableNativeFeedback.SelectableBackground()}>
+            <View style={styles.button}>
+              <Text style={styles.buttonText}>{_menu.legendary.title}</Text>
               <View style={styles.buttonIcon}>
                 <Icon name="import-contacts" size={30} color="#3F51B5" />
               </View>
